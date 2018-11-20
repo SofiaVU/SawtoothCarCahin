@@ -91,7 +91,7 @@ def _create_asset(asset, owner, state):
     state.set_asset(asset, owner)
 
 
-def _transfer_asset(asset, owner, signer, state):
+"""def _transfer_asset(asset, owner, signer, state):
     asset_data = state.get_asset(asset)
     if asset_data is None:
         raise InvalidTransaction('Asset does not exist')
@@ -124,4 +124,4 @@ def _reject_transfer(asset, signer, state):
         raise InvalidTransaction(
             'Transfers can only be rejected by the potential new owner')
 
-    state.delete_transfer(asset)
+    state.delete_transfer(asset)"""

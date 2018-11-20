@@ -32,16 +32,17 @@ class CarchainPayload(object):
 
         if not action:
             raise InvalidTransaction('Action is required')
-        if action not in ('create', 'transfer', 'accept', 'reject'):
+        #if action not in ('create', 'transfer', 'accept', 'reject'):
+        if action not in ('create'):
             raise InvalidTransaction('Invalid action: {}'.format(action))
 
         if not asset:
             raise InvalidTransaction('Asset is required')
 
-        if action == 'transfer':
+        """if action == 'transfer':
             if not owner:
                 raise InvalidTransaction(
-                    'Owner is required for "transfer" transaction')
+                    'Owner is required for "transfer" transaction')"""
 
         self._action = action
         self._asset = asset

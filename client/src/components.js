@@ -17,9 +17,6 @@ const addOption = (parent, value, selected = false) => {
 
 // Add a new table row with any number of cells
 const addRow = (parent, ...cells) => {
-  //const tds = cells.map(cell => `<td>${cell}</td>`).join('')
-  //$(parent).append(`<tr>${tds}</tr>`)
-
   var cells2 = cells[0].split(',')
   var help = cells2.concat(cells[1])
   const tds = help.map(cell => `<td>${cell}</td>`).join('')

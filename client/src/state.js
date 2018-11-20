@@ -54,7 +54,7 @@ const saveKeys = keys => {
   localStorage.setItem(KEY_NAME, paired.join(';'))
 }
 
-// Fetch current Sawtooth Tuna Chain state from validator
+// Fetch current Sawtooth Car Chain state from validator
 const getState = cb => {
   $.get(`${API_URL}/state?address=${PREFIX}`, ({ data }) => {
     cb(data.reduce((processed, datum) => {

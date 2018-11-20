@@ -89,7 +89,6 @@ $('[name="keySelect"]').on('change', function () {
 
 // Create Asset
 $('#createSubmit').on('click', function () {
-  //const asset = $('#createName').val()
   const brand = $('#brand').val()
   const model = $('#model').val()
   const category = $('#category').val()

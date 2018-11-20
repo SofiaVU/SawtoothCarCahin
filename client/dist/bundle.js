@@ -29967,7 +29967,6 @@ $('[name="keySelect"]').on('change', function () {
 
 // Create Asset
 $('#createSubmit').on('click', function () {
-  //const asset = $('#createName').val()
   const brand = $('#brand').val()
   const model = $('#model').val()
   const category = $('#category').val()
@@ -30061,7 +30060,7 @@ const saveKeys = keys => {
   localStorage.setItem(KEY_NAME, paired.join(';'))
 }
 
-// Fetch current Sawtooth Tuna Chain state from validator
+// Fetch current Sawtooth Car Chain state from validator
 const getState = cb => {
   $.get(`${API_URL}/state?address=${PREFIX}`, ({ data }) => {
     cb(data.reduce((processed, datum) => {
@@ -43658,9 +43657,6 @@ const addOption = (parent, value, selected = false) => {
 
 // Add a new table row with any number of cells
 const addRow = (parent, ...cells) => {
-  //const tds = cells.map(cell => `<td>${cell}</td>`).join('')
-  //$(parent).append(`<tr>${tds}</tr>`)
-
   var cells2 = cells[0].split(',')
   var help = cells2.concat(cells[1])
   const tds = help.map(cell => `<td>${cell}</td>`).join('')
